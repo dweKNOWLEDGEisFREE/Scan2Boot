@@ -25,9 +25,17 @@ Usefull programs: lynx, mc, aptitude, sysv-rc-conf.
 Installing the script:
 
 Create user.: adduser scan2
-Change shell: chsh /home/scan2/scan2Boot.py
+Change shell: chsh scan2
+            | /home/scan2/scan2Boot.py
 Change sudo.: Add line ... to /etc/sudoers
-            : scan2 ALL=NOPASSWD:ALL
+            | scan2 ALL=NOPASSWD:ALL
+Mod systemd : modify file /lib/systemd/system/getty@service
+            | ...
+            | [Service]
+            | # the VT is cleared by TTYVTDisallocate
+            | #ExecStart=-/sbin/agetty --noclear %I $TERM
+            | ExecStart=-/sbin/agetty --noclear --autologin scan2 %I $TERM
+            | ...
 
 '''
 
