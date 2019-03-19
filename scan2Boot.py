@@ -4,7 +4,7 @@
 '''
 Created on Mar 9, 2019
 
-@author: ipcdevelop
+@author: ejs
 
 apt-get install sudo
 
@@ -46,12 +46,12 @@ def_pal = [('logo',  'white,bold',     'black'     ),
            ('btnGO', 'white,bold',     'dark green'),
            ('btnXX', 'white,bold',     'light gray'),]
 
-def_txt = (u"S u i t e   Version 0.9\n\n"+
+def_txt = (u"S u i t e   Version 0.9.1\n\n"+
            u"Data Acquisition Services\nfor iTop with TeemIP.\n"+
            u"Modules: Scan2IP Scan2VMware Scan2Agent")
 
 def_url = (u"Updates, documentation and FAQ are available at:\n\n"+
-           u"http://host ...\n\n\n"+
+           u"https://github.com/dweKNOWLEDGEisFREE\n\n\n"+
            u"Please visit the following URLs to configure each service.\n")
 
 
@@ -85,9 +85,9 @@ def MainWin():
             txt.append(u"\n")
             txt.append(u"scan2IP....: ")
             txt.append(('logo', u"http://"+ipStr+":5000\n"))
-            txt.append(u"scan2VMware: ")
-            txt.append(('logo', u"http://"+ipStr+":5001\n"))
             txt.append(u"scan2Agent.: ")
+            txt.append(('logo', u"http://"+ipStr+":5001\n"))
+            txt.append(u"scan2VMware: ")
             txt.append(('logo', u"http://"+ipStr+":5002\n"))
         # CHECK RESULTS
         if len(txt)==0:
