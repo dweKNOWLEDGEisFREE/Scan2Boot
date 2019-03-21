@@ -166,7 +166,8 @@ if __name__ == '__main__':
         print("\n\nExit the system shell by entering: exit\n")
         sys.stdout.flush()
         sys.stderr.flush()
-        cmd=('sh')
+    #   cmd=('sh')
+        cmd=('sudo bash')
         os.system(cmd)
         loop.screen.start()
         show_main(key)
@@ -182,7 +183,8 @@ if __name__ == '__main__':
     # Shutting Down        
     def cmd_shutdown(key):
         loop.screen.stop()
-        cmd=('sudo halt')
+    #   cmd=('sudo halt')
+        cmd=('sudo poweroff')
         os.system(cmd)
         loop.screen.start()
         show_main(key)
