@@ -1,0 +1,2 @@
+#!/bin/sh
+chsh scan2 -s /bin/bash

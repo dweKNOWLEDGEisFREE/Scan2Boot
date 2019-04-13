@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 
-'''
-Created on Mar 9, 2019
+''' Scan2Boot - Boot and information screen.
 
-@author: ejs
+    This program is part of the Scan2 Suite.
+    https://github.com/dweKNOWLEDGEisFREE
+
+    This program is licensed under the GNU General Public License v3.0
+
+    Copyright 2019 by David Weyand, Ernst Schmid
+
 
 apt-get install sudo
 
@@ -54,7 +59,7 @@ def_pal = [('logo',  'white,bold',     'black'     ),
            ('btnGO', 'white,bold',     'dark green'),
            ('btnXX', 'white,bold',     'light gray'),]
 
-def_txt = (u"S u i t e   Version 0.9.1\n\n"+
+def_txt = (u"S u i t e   Version 0.10\n\n"+
            u"Data Acquisition Services\nfor iTop with TeemIP.\n"+
            u"Modules: Scan2IP Scan2VMware Scan2Agent")
 
@@ -156,6 +161,7 @@ if __name__ == '__main__':
     def dlgConfig():
         """ part of network manager """
         loop.screen.stop()
+    #   cmd=('nmtui-edit')
         cmd=('sudo ./edit.py /etc/network/interfaces')
         os.system(cmd)
         loop.screen.start()
